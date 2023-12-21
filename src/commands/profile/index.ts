@@ -15,7 +15,6 @@ export default class Profile extends Command {
 
   async run(): Promise<void> {
     const {args} = await this.parse(Profile)
-    console.log(args.username)
     await fetch(`https://api.github.com/users/${args.username}`)
     .then(response => response.json())
     .then(data => {

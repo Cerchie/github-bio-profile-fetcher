@@ -1,7 +1,7 @@
 {
   "author": "Cerchie @Cerchie",
   "bin": {
-    "github-profile-bio-fetcher": "./bin/run.js"
+    "github-profile-bio-fetcher": "bin/run.js"
   },
   "dependencies": {
     "@oclif/core": "^3",
@@ -36,7 +36,7 @@
   ],
   "homepage": "https://github.com/Cerchie/github-profile-bio-fetcher",
   "license": "MIT",
-  "main": "",
+  "main": "index.js",
   "name": "github-profile-bio-fetcher",
   "oclif": {
     "bin": "github-profile-bio-fetcher",
@@ -53,7 +53,10 @@
       }
     }
   },
-  "repository": "Cerchie/github-profile-bio-fetcher",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cerchie/github-profile-bio-fetcher.git"
+  },
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
     "lint": "eslint . --ext .ts",
@@ -65,11 +68,16 @@
     "version": "oclif readme && git add README.md"
   },
   "version": "0.0.0",
-  "bugs": "https://github.com/Cerchie/github-profile-bio-fetcher/issues",
+  "bugs": {
+    "url": "https://github.com/Cerchie/github-profile-bio-fetcher/issues"
+  },
   "keywords": [
     "oclif"
   ],
   "types": "dist/index.d.ts",
   "exports": "./lib/index.js",
-  "type": "module"
+  "type": "module",
+  "directories": {
+    "test": "test"
+  }
 }
